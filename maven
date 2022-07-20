@@ -1,1 +1,28 @@
 mvn仓库地址：  https://mvnrepository.com/
+mvn改本地仓库地址： conf -> settings.xml      <localRepository>/Users/name/data</localRepository>
+  mvn启动后，会自动保存下载资源到本地仓库， 默认位置为${user.home}/.m2/repository
+mvn远程仓库的配置：  
+   镜像仓库配置：   在setting文件中配置阿里云镜像仓库。    mirrors 内配置。 
+              <mirror> 
+                  <id>nexus-aliyun</id> 镜像标识符
+                  <mirrorOf>central</mirrorOf>   替代哪个仓库。
+                  <name>Nexus aliyun</name> 可无
+                  <url><url>
+             
+     全局setting与 用户setting。
+     
+ 
+ mvn构建命令使用mvn开头， 后面添加功能参数， 可以一次执行多个命令，使用空格分隔
+ 
+ mvn complie  编译
+ mvn clean    清理
+ mvn test     测试
+ mvn package  打包
+ mvn install  安装到本地仓库
+ 
+ 
+ 创建工程
+  mvn archetype:genrate
+ 创建java工程
+  mvn archetype:genrate. -DgroupId=com.name -DartifactId=java-pro 
+ 创建web工程。
